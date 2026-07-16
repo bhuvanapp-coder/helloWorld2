@@ -1,20 +1,32 @@
-// Valid JSX
-
 import Header from "./components/Header";
-
-
+import StudentCard from "./components/StudentCard";
 
 function App() {
-    const universityName = "University Hub";
+  return (
+    <div>
+      <Header />
+      <h2>Current Students</h2>
 
-    return (
-        <div className="main-container">
-        <Header/>
-        
-            <h1>Welcome to {universityName}</h1>
-            <p>Manage your academic life here.</p>
-        </div>
-    );
+      {/* Reusing the same component with different data */}
+      <StudentCard 
+        name="Alice Wonderland"
+        studentId="s001"
+        major="Computer Science"
+      />
+
+      <StudentCard
+        name="Bob Builder"
+        studentId="s002"
+        major="Civil Engineering"
+      />
+
+      <StudentCard
+        name="Charlie Chocolate"
+        studentId="s003"
+        major="Culinary Arts"
+      />
+    </div>
+  );
 }
 
 export default App;
