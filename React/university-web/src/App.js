@@ -55,6 +55,9 @@ function App() {
 
       <h2>Search Bar</h2>
       <SearchBar />
+
+      <h2>Click Tracker (Updates Tab Title)</h2>
+      <TitleUpdater />
     </div>
   );
 }
