@@ -3,6 +3,7 @@ import StudentCard from "./components/StudentCard";
 import CourseCard from "./components/CourseCard";
 import Counter from "./components/Counter";
 import SearchBar from "./components/Search";
+import UserGreeting from "./components/UserGreeting";
 
 
 function App() {
@@ -58,6 +59,9 @@ function App() {
 
       <h2>Click Tracker (Updates Tab Title)</h2>
       <TitleUpdater />
+
+      <UserGreeting isLoggedIn={true} />
+      <Header/>
     </div>
   );
 }
