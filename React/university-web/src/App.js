@@ -30,7 +30,7 @@ function App() {
 
       <h2>Available Courses</h2>
       
-      {/* Reusing the same component with different data */}
+    
       <CourseCard
         title="Introduction to Programming"
         code="CS101"
