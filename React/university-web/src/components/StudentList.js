@@ -20,28 +20,22 @@ fubcnction StudentList() {
     return () => clearTimeout(timer);
   }, []);
 
-
-
-
-
-  
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <div>
-      <h2>Current Students</h2>
-      {students.map((student) => (
-        <StudentCard
-          key={student.id}
-          name={student.name}
-          studentId={student.id}
-          major={student.major}
-        />
-      ))}
+      <h2>Student List</h2>
+        {loading ? (
+            <p>Loading...</p>
+        ) : (
+            <ul>
+                {students.map(s => (
+                    <li key={s.id}>
+                        {s.name}  ({s.major})
+                    </li>
+                ))}
+            </ul>
+        )}
     </div>
   );
 }
 
-export default StudentList;
+export default StudentList;         
