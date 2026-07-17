@@ -6,6 +6,7 @@ import SearchBar from "./components/SearchBar";
 import StudentList from "./components/StudentList";
 import TitleUpdater from "./components/TitleUpdater";
 import UserGreetings from "./components/UserGreeting";
+import RegistrationForm from "./components/RegistrationForm";
 
 
 function App() {
@@ -64,6 +65,9 @@ function App() {
       <TitleUpdater />
       <h2>Greetings</h2>
       <UserGreetings isLoggedIn={true} />
+
+      <h2>Register</h2>
+      <RegistrationForm />
     </div>
   );
 }

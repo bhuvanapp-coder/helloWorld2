@@ -49,3 +49,5 @@ function RegistrationForm() {
   </form>
 );
 }
+
+export default RegistrationForm;
