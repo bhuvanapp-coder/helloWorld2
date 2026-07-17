@@ -1,5 +1,7 @@
 import Header from "./components/Header";
 import StudentCard from "./components/StudentCard";
+import CourseCard from "./components/CourseCard";
+
 
 function App() {
   return (
