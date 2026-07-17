@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-fubcnction StudentList() {
+function StudentList() {
   const [students, setStudents] = useState([]);
   const [loading, setLoading] = useState(true);
 
