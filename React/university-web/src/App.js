@@ -48,6 +48,8 @@ function App() {
         code="CS301"
         credits={4}
       /> 
+      <h2>Attendance Counter</h2>
+      <Counter />
     </div>
   );
 }
