@@ -3,7 +3,9 @@ import StudentCard from "./components/StudentCard";
 import CourseCard from "./components/CourseCard";
 import Counter from "./components/Counter";
 import SearchBar from "./components/SearchBar";
-import UserGreeting from "./components/UserGreeting";
+import StudentList from "./components/StudentList";
+import TitleUpdater from "./components/TitleUpdater";
+import UserGreetings from "./components/UserGreeting";
 
 
 function App() {
@@ -11,22 +13,22 @@ function App() {
     <div>
       <Header />
       <h2>Current Students</h2>
-
+      
       {/* Reusing the same component with different data */}
       <StudentCard 
-        name="Alice Wonderland"
+        name="Alice"
         studentId="s001"
         major="Computer Science"
       />
-
-      <StudentCard
-        name="Bob Builder"
+      
+      <StudentCard 
+        name="Bob"
         studentId="s002"
         major="Civil Engineering"
       />
-
-      <StudentCard
-        name="Charlie Chocolate"
+      
+      <StudentCard 
+        name="Charlie"
         studentId="s003"
         major="Culinary Arts"
       />
@@ -34,37 +36,36 @@ function App() {
       <h2>Available Courses</h2>
       
     
-      <CourseCard
-        title="Introduction to Programming"
-        code="CS101"
-        credits={3}
+      <CourseCard 
+        title="Introduction to React" 
+        code="CS-101" 
+        credits={3} 
+      />
+      <CourseCard 
+        title="Database Systems" 
+        code="CS-204" 
+        credits={4} 
+      />
+      <CourseCard 
+        title="Advanced Web Development" 
+        code="CS-302" 
+        credits={3} 
       />
 
-      <CourseCard
-        title="Data Structures"
-        code="CS201"
-        credits={4}
-      />
 
-      <CourseCard
-        title="Operating Systems"
-        code="CS301"
-        credits={4}
-      /> 
-      <h2>Attendance Counter</h2>
+      <h2>Attendance Counter </h2>
       <Counter />
 
       <h2>Search Bar</h2>
       <SearchBar />
-
-      <h2>Click Tracker (Updates Tab Title)</h2>
+      <h2>Student list</h2>
+       <StudentList />
+      <h2>Click Tracker</h2>
       <TitleUpdater />
-
-      <UserGreeting isLoggedIn={true} />
-      <Header/>
+      <h2>Greetings</h2>
+      <UserGreetings isLoggedIn={true} />
     </div>
   );
 }
-
 
 export default App;

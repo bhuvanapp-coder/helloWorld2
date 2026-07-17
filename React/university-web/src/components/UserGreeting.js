@@ -1,4 +1,4 @@
-function UserGreeting({ props }) {
+function UserGreeting( props ) {
     const isLoggedIn = props.isLoggedIn;
 
     return (
