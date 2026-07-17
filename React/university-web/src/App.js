@@ -2,7 +2,7 @@ import Header from "./components/Header";
 import StudentCard from "./components/StudentCard";
 import CourseCard from "./components/CourseCard";
 import Counter from "./components/Counter";
-import SearchBar from "./components/Search";
+import SearchBar from "./components/SearchBar";
 import UserGreeting from "./components/UserGreeting";
 
 
