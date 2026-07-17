@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import StudentCard from "./components/StudentCard";
 import CourseCard from "./components/CourseCard";
 import Counter from "./components/Counter";
+import SearchBar from "./components/Search";
 
 
 function App() {
@@ -51,6 +52,9 @@ function App() {
       /> 
       <h2>Attendance Counter</h2>
       <Counter />
+
+      <h2>Search Bar</h2>
+      <SearchBar />
     </div>
   );
 }
