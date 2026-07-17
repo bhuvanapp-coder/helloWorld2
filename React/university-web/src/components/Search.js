@@ -11,5 +11,13 @@ function SearchBar() {
         <p>Search for a course: </p>
         
         <input
+            type= "text"
+            value={query}
+            onChange={handleChange}
+        />
+        <p>You are typing: {query}</p>
     </div>
+  );
 }
+
+export default SearchBar;
