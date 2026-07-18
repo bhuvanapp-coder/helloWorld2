@@ -1,3 +1,6 @@
+import React from 'react'
+
+// props is the object containing all attributes passed to this file
 function StudentCard(props) {
   return (
     <div
@@ -5,7 +8,7 @@ function StudentCard(props) {
       style={{
         border: "1px solid #ccc",
         padding: "10px",
-        margin: "10px"
+        margin: "10px",
       }}
     >
       <h3 className="text-xl font-bold text-gray-800">
