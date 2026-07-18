@@ -1,111 +1,72 @@
-import Header from "./components/Header";
-import StudentCard from "./components/StudentCard";
-import CourseCard from "./components/CourseCard";
-import Counter from "./components/Counter";
-import SearchBar from "./components/SearchBar";
-import StudentList from "./components/StudentList";
-import TitleUpdater from "./components/TitleUpdater";
-import UserGreetings from "./components/UserGreeting";
-import RegistrationForm from "./components/RegistrationForm";
-import {Routes, Route, Link } from "react-router-dom";
-import Home from "./components/Home";
-
-
-
+import Header from './component/Header';
+import StudentCard from './component/StudentCard';
+import CourseCard from './component/CourseCard';
+import Counter from './component/Counter';
+import SearchBar from './component/SearchBar';
+import StudentList from './component/StudentList';
+import TitleUpdater from './component/TitleUpdater';
+import UserGreeting from './component/UserGreeting';
+import CourseList from './component/CourseList';
+import RegistrationForm from './component/RegistrationForm';
+import { Link ,Route,Routes} from 'react-router-dom';
+import Home from './component/Home';
 function App() {
-  return (
+  return(
     <div>
-      <Header />
-      <h2>Current Students</h2>
-      
+      {/*Navigation*/}
       <nav>
-        <Link to ="/">Home</Link>
-        <Link to ="/students">Students</Link>
-        <Link to ="/courses">Courses</Link>
-        <Link to ="/about">About</Link>
+        <Link to="/">Home</Link>
+        <Link to="/students">Students</Link>
+        <Link to="/courses">Courses</Link>
+        <Link to="/about">About</Link>
+        <Link to="/studentslist">Live Student List</Link>
+        
+        
       </nav>
       <Routes>
+        {/* Home Page */}
         <Route path="/" element={<Home />} />
-        <Route path="/students" element={<StudentList />} />
-      </Routes>
+        <Route path='/studentslist' element={<StudentList/>} />
+        {/* Students Page */}
+        <Route path="/students" element={
         <div>
-          <StudentCard 
-        name="Alice"
-        studentId="s001"
-        major="Computer Science"
-      />
-      
-      <StudentCard 
-        name="Bob"
-        studentId="s002"
-        major="Civil Engineering"
-      />
-      
-      <StudentCard 
-        name="Charlie"
-        studentId="s003"
-        major="Culinary Arts"
-      />
+          <StudentCard name="Gayathri" studentId="12345" major="Computer Science" />
+          <StudentCard name="Aswathy" studentId="67890" major="Mathematics" /> 
+          <StudentCard name="Ganga" studentId="54321" major="Physics" />
         </div>
-      
+         } />
 
+        
+      </Routes> 
 
-      {/* Reusing the same component with different data */}
-      <StudentCard 
-        name="Alice"
-        studentId="s001"
-        major="Computer Science"
-      />
+     
+      <Header />
       
-      <StudentCard 
-        name="Bob"
-        studentId="s002"
-        major="Civil Engineering"
-      />
-      
-      <StudentCard 
-        name="Charlie"
-        studentId="s003"
-        major="Culinary Arts"
-      />
-
-      <h2>Available Courses</h2>
-      
+      <SearchBar onSearch={(query) => console.log('Searching for:', query)} />
     
-      <CourseCard 
-        title="Introduction to React" 
-        code="CS-101" 
-        credits={3} 
-      />
-      <CourseCard 
-        title="Database Systems" 
-        code="CS-204" 
-        credits={4} 
-      />
-      <CourseCard 
-        title="Advanced Web Development" 
-        code="CS-302" 
-        credits={3} 
-      />
+      <RegistrationForm/>
+      <h2>Current Students</h2>
+      <StudentCard name="Gayathri" studentId="12345" major="Computer Science" />
+      <StudentCard name="Aswathy" studentId="67890" major="Mathematics" /> 
+      <StudentCard name="Ganga" studentId="54321" major="Physics" />
+      <h2>Current Courses</h2>
+      <CourseList/>
+      <CourseCard title="Introduction to Computer Science" code="CS101" credits="3" />
+      <CourseCard title="Calculus I" code="MATH101" credits="4" /> 
 
-
-      <h2>Attendance Counter </h2>
+      <h2>Class Attendance Counter</h2>
       <Counter />
-
-      <h2>Search Bar</h2>
-      <SearchBar />
-      <h2>Student list</h2>
-       <StudentList />
-      <h2>Click Tracker</h2>
-      <TitleUpdater />
-      <h2>Greetings</h2>
-      <UserGreetings isLoggedIn={true} />
-
-      <h2>Register</h2>
-      <RegistrationForm />
     
+
+      {/*Title Updater*/}
+      <h2>Click Tracker(Updates Tab Title)</h2>
+      <TitleUpdater/>
+      
+
+      <UserGreeting isLoggedIn={true} />
+
+      
     </div>
   );
 }
-
 export default App;
