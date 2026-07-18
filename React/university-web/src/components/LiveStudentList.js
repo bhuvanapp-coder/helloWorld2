@@ -31,3 +31,37 @@ function LiveStudentList() {
     // 4. Call it
     fetchData();
   }, []);
+
+  return (
+  <div className="max-w-2xl mx-auto">
+    <h2 className="text-2xl font-bold mb-4 text-center">
+      Students (Live from Django)
+    </h2>
+
+    {loading ? (
+      <p className="text-center text-gray-500">
+        Loading students...
+      </p>
+    ) : students.length === 0 ? (
+      <p className="text-center text-gray-500">
+        No students found.
+      </p>
+    ) : (
+      students.map(s => (
+        <div
+          key={s.id}
+          className="bg-white border border-black p-4"
+        >
+          <h3 className="text-lg font-semibold">
+            {s.first_name} {s.last_name}
+          </h3>
+
+          <p className="text-gray-600 text-sm mt-1">
+            {s.email}
+          </p>
+        </div>
+      ))
+    )}
+  </div>
+);
+}
