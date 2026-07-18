@@ -15,6 +15,19 @@ function App() {
       <Header />
       <h2>Current Students</h2>
       
+      <nav>
+        <Link to ="/">Home</Link>
+        <Link to ="/students">Students</Link>
+        <Link to ="/courses">Courses</Link>
+        <Link to ="/about">About</Link>
+      </nav>
+      <Routes>
+        <Routes path="/" element={<Home />} />
+        <Routes path="/students" element={<StudentList />} />
+        
+      
+
+
       {/* Reusing the same component with different data */}
       <StudentCard 
         name="Alice"
@@ -68,6 +81,7 @@ function App() {
 
       <h2>Register</h2>
       <RegistrationForm />
+    </Routes>
     </div>
   );
 }
