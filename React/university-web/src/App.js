@@ -7,6 +7,9 @@ import StudentList from "./components/StudentList";
 import TitleUpdater from "./components/TitleUpdater";
 import UserGreetings from "./components/UserGreeting";
 import RegistrationForm from "./components/RegistrationForm";
+import {Routes, Route, Link } from "react-router-dom";
+import Home from "./components/Home";
+
 
 
 function App() {
@@ -22,9 +25,28 @@ function App() {
         <Link to ="/about">About</Link>
       </nav>
       <Routes>
-        <Routes path="/" element={<Home />} />
-        <Routes path="/students" element={<StudentList />} />
-        
+        <Route path="/" element={<Home />} />
+        <Route path="/students" element={<StudentList />} />
+      </Routes>
+        <div>
+          <StudentCard 
+        name="Alice"
+        studentId="s001"
+        major="Computer Science"
+      />
+      
+      <StudentCard 
+        name="Bob"
+        studentId="s002"
+        major="Civil Engineering"
+      />
+      
+      <StudentCard 
+        name="Charlie"
+        studentId="s003"
+        major="Culinary Arts"
+      />
+        </div>
       
 
 
@@ -81,7 +103,7 @@ function App() {
 
       <h2>Register</h2>
       <RegistrationForm />
-    </Routes>
+    
     </div>
   );
 }
