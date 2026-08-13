@@ -1,15 +1,15 @@
-import Header from './component/Header';
-import StudentCard from './component/StudentCard';
-import CourseCard from './component/CourseCard';
-import Counter from './component/Counter';
-import SearchBar from './component/SearchBar';
-import StudentList from './component/StudentList';
-import TitleUpdater from './component/TitleUpdater';
-import UserGreeting from './component/UserGreeting';
-import CourseList from './component/CourseList';
-import RegistrationForm from './component/RegistrationForm';
+import Header from './components/Header';
+import StudentCard from './components/StudentCard';
+import CourseCard from './components/CourseCard';
+import Counter from './components/Counter';
+import SearchBar from './components/SearchBar';
+import StudentList from './components/StudentList';
+import TitleUpdater from './components/TitleUpdater';
+import UserGreeting from './components/UserGreeting';
+import CourseList from './components/CourseList';
+import RegistrationForm from './components/RegistrationForm';
 import { Link ,Route,Routes} from 'react-router-dom';
-import Home from './component/Home';
+import Home from './components/Home';
 function App() {
   return(
     <div>

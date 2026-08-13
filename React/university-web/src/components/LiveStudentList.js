@@ -65,3 +65,5 @@ function LiveStudentList() {
   </div>
 );
 }
+export default LiveStudentList;
+
