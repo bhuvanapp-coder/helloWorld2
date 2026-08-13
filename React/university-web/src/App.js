@@ -5,6 +5,7 @@ import Counter from './components/Counter';
 import SearchBar from './components/SearchBar';
 import StudentList from './components/StudentList';
 import TitleUpdater from './components/TitleUpdater';
+import Login from './components/Login';
 import UserGreeting from './components/UserGreeting';
 import CourseList from './components/CourseList';
 import RegistrationForm from './components/RegistrationForm';
@@ -24,6 +25,8 @@ function App() {
         
       </nav>
       <Routes>
+        {/*Login Page */}
+        <Route path="/login" element={<Login />} />
         {/* Home Page */}
         <Route path="/" element={<Home />} />
         <Route path='/studentslist' element={<StudentList/>} />
