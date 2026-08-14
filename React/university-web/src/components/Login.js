@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
+import {AuthContext} from "../Context/AuthContext";
 
 function Login() {
+  const { login } = useContext(AuthContext);
+  const [creds, setCreds] = useState({
+    username: "",
+    password: ""
+  });
 
   const [creds, setCreds] = useState({
     username: "",
@@ -35,6 +41,7 @@ function Login() {
       axios.defaults.headers.common[
         "Authorization"
       ] = `Token ${token}`;
+      login({ username: creds.username });
 
       alert("Login Successful!");
 

@@ -15,13 +15,13 @@ function App() {
   return(
     <div>
       {/*Navigation*/}
-      <nav>
+    <nav>
         <Link to="/">Home</Link>
         <Link to="/students">Students</Link>
         <Link to="/courses">Courses</Link>
         <Link to="/about">About</Link>
         <Link to="/studentslist">Live Student List</Link>
-        
+      
         
       </nav>
       <Routes>
